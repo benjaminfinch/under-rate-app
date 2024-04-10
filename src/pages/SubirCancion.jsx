@@ -4,6 +4,7 @@ import Pagination from "react-bootstrap/Pagination";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UnderRateBlanco from "../assets/images/UnderRateBlanco.svg"
+import slide2 from "../assets/images/slide2.png";
 
 const SubirCancion = () => {
   const navigate = useNavigate();
@@ -49,7 +50,7 @@ const SubirCancion = () => {
   return (
     <div
       className="auth-form-container AppLog bg_cover footer-style-two"
-      style={{ backgroundImage: "url(src/assets/images/slide2.png)" }}
+      style={{ backgroundImage: `url(${slide2})` }}
     >
       <a className="brand-logo mb-30" href="#">
         <img
