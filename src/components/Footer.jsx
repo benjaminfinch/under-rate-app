@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       className="footer-area footer-style-two bg_cover"
-      style={{ background: slide2 }}
+      style={{ backgroundImage: `url(${slide2})` }}
     >
       <div className="container">
         <div className="footer-widget pt-70 pb-35">
