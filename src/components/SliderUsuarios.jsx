@@ -2,7 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import Image from "react-bootstrap/Image";
 import avatar1 from "../assets/images/avatar1.png";
-
+import avatar2 from "../assets/images/avatar2.png";
+import avatar3 from "../assets/images/avatar3.png";
 
 const testimonialSliderOne = {
   dots: false,
@@ -56,7 +57,7 @@ const SliderUsuarios = () => {
                     </div>
                     <div className="author-title pt-10">
                       <h3>Peter</h3>
-                      <p className="position">@usuario1</p>
+                      <p className="position">@Usuario1</p>
                     </div>
                   </div>
                 </div>
@@ -73,13 +74,13 @@ const SliderUsuarios = () => {
                       <Image
                         width={50}
                         height={50}
-                        src="\src\assets\images\avatar2.png"
+                        src={avatar2}
                         alt="user image"
                       />
                     </div>
                     <div className="author-title pt-10">
                       <h3>Johana</h3>
-                      <p className="position">@usuario2</p>
+                      <p className="position">@Usuario2</p>
                     </div>
                   </div>
                 </div>
@@ -94,13 +95,13 @@ const SliderUsuarios = () => {
                       <Image
                         width={50}
                         height={50}
-                        src="\src\assets\images\avatar3.png"
+                        src={avatar3}
                         alt="user image"
                       />
                     </div>
                     <div className="author-title pt-10">
-                      <h3>Usuario3</h3>
-                      <p className="position">Usuario3</p>
+                      <h3>Ricardo</h3>
+                      <p className="position">@Usuario3</p>
                     </div>
                   </div>
                 </div>
