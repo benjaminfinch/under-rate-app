@@ -2,6 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import slide2 from "../assets/images/slide2.png";
+import UnderRateBlanco from "../assets/images/UnderRateBlanco.svg";
+
 
 export default function Register() {
   const navigate = useNavigate();
@@ -53,11 +56,11 @@ export default function Register() {
   return (
     <div
       className="auth-form-container AppLog bg_cover footer-style-two"
-      style={{ backgroundImage: "url(src/assets/images/slide2.png)" }}
+      style={{ backgroundImage: `url(${slide2})` }}
     >
       <a className="brand-logo mb-30" href="#">
         <img
-          src="src/assets/images/UnderRateBlanco.svg"
+          src={UnderRateBlanco}
           width={180}
           alt="Site Logo"
         />
