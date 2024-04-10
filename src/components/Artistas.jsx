@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'react-bootstrap/Image';
+import ImagenCD1 from '../assets/images/cd1.webp';
+
 
 const artistas = () => {
   return (
@@ -24,7 +26,7 @@ const artistas = () => {
             <div className="col-lg-3 col-md-6 col-sm-12">
               <div className="d-flex justify-content-center mb-40 wow fadeInUp">
                 <div className="">              
-                   <Image className='shadow' src="src/assets/images/cd1.webp" width={260}  rounded />
+                   <Image className='shadow' src={ImagenCD1} width={260}  rounded />
                 </div>
               </div>
             </div>
