@@ -29,8 +29,8 @@ const Bloque1_Reproductor = () => {
           </div>
           <div className='col-lg-6 col-md-12 col-sm-6 pt-30'>
                <h1 className='anclaDos'>{artist.username}</h1>
-               <p className='anclaDos'>Under Rate es una plataforma de música en línea que permite a los usuarios descubrir, escuchar, subir y compartir música.
-                   Ofrecemos una amplia variedad de funciones para usuarios tanto aficionados como profesionales de la música.</p>
+               <p className='anclaDos'>Somos una banda de cuatro amigos formada en el año 2021 en las calles de Valparaíso.
+                  Nos encantaría irnos de gira por todo el país y conocer a gente nueva. Y creemos que esta plataforma podría ayudarnos a llegar a más público. Escúcha la música que tanto amamos tocar.</p>
           </div>
       
        </div>
