@@ -9,9 +9,10 @@ const Bloque_1_Nosotros = () => {
        <div className='row'>          
           <div className='col-lg-6 col-md-12 col-sm-6 '>
                <h1>Acerca de Under Rate</h1>
-               <p>Under Rate es un reproductor de música digital diseñado específicamente para nuevos artistas emergentes en la industria musical. Este reproductor ofrece una plataforma accesible y centrada en el apoyo a talentos emergentes, brindándoles la oportunidad de dar a conocer su música a un público más amplio.</p>
-               <p>Con Under Rate, los artistas pueden cargar fácilmente su música y conectar con fans potenciales sin las barreras tradicionales que a menudo enfrentan los nuevos talentos. Además de la reproducción de música, la plataforma también ofrece funciones para que los artistas gestionen y promocionen su trabajo, como herramientas de análisis de audiencia y opciones de promoción.</p>
-               <p>Under Rate se destaca por su enfoque en la equidad y la democratización del acceso a la industria musical, proporcionando una plataforma inclusiva donde todos los artistas tienen la oportunidad de ser descubiertos y valorados por su talento, independientemente de su popularidad o recursos previos.</p>
+            <h2>Misión </h2>
+            <p>Desarrollar y fortalecer una relación más cercana entre los artistas emergentes con su audiencia y ayudarlos a alcanzar su máximo potencial creativo.</p>
+            <h2>Visión</h2>
+            <p>Queremos ser el punto de partida para los músicos que buscan construir su audiencia y hacerse un nombre en la escena musical.</p>
           </div>
           <div className='col-lg-6 col-md-12 col-sm-6 pt-30'>
                <Image className='shadow ' src={ImagenBloqueUno} width={480}  rounded />
