@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import UnderRateBlanco from "../assets/images/UnderRateBlanco.svg";
+import slide2 from "../assets/images/slide2.png";
 const Footer = () => {
   return (
     <footer
       className="footer-area footer-style-two bg_cover"
-       style={{ backgroundImage: "url(src/assets/images/slide2.png)" }}
+      style={(background = slide2)}
     >
       <div className="container">
         <div className="footer-widget pt-70 pb-35">
@@ -15,20 +16,24 @@ const Footer = () => {
                 data-wow-delay=".2s"
               >
                 <div className="logo mb-35">
-                    <a>
-                     <img src={UnderRateBlanco} width={220} alt="Site Logo" />
-                    </a>                  
+                  <a>
+                    <img src={UnderRateBlanco} width={220} alt="Site Logo" />
+                  </a>
                 </div>
                 <div className="about-content">
                   <h4 className=" text-underline">
-                   Tu soundtrack favorito,
-                    en cualquier momento y lugar
+                    Tu soundtrack favorito, en cualquier momento y lugar
                   </h4>
                   <ul>
                     <li>
                       <i className="far fa-envelope" />
                       <span>
-                        <a className="ancla" href="mailto:contacto@underrate.cl">contacto@underrate.cl</a>
+                        <a
+                          className="ancla"
+                          href="mailto:contacto@underrate.cl"
+                        >
+                          contacto@underrate.cl
+                        </a>
                       </span>
                     </li>
                     <li>
@@ -38,7 +43,9 @@ const Footer = () => {
                     <li>
                       <i className="far fa-phone" />
                       <span>
-                        <a className="ancla" href="tel:+5698765432">+56 987 654 32</a>
+                        <a className="ancla" href="tel:+5698765432">
+                          +56 987 654 32
+                        </a>
                       </span>
                     </li>
                   </ul>
@@ -51,8 +58,7 @@ const Footer = () => {
                 data-wow-delay=".3s"
               >
                 <h4 className="widget-title text-underline"></h4>
-                <ul className="footer-nav list-style-dot">
-                </ul>
+                <ul className="footer-nav list-style-dot"></ul>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
@@ -60,16 +66,24 @@ const Footer = () => {
                 className="widget footer-nav-widget mb-40 wow fadeInUp"
                 data-wow-delay=".5s"
               >
-                <h4 className="widget-title text-underline">Sé parte de nuestra comunidad</h4>
+                <h4 className="widget-title text-underline">
+                  Sé parte de nuestra comunidad
+                </h4>
                 <ul className="footer-nav list-style-dot">
                   <li>
-                    <a className="ancla" href="/nosotros">Nosotros</a>
+                    <a className="ancla" href="/nosotros">
+                      Nosotros
+                    </a>
                   </li>
                   <li>
-                    <a className="ancla" href="/registro">Regístrate</a>
+                    <a className="ancla" href="/registro">
+                      Regístrate
+                    </a>
                   </li>
                   <li>
-                    <a className="ancla" href="/contacto">Contáctanos</a>
+                    <a className="ancla" href="/contacto">
+                      Contáctanos
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -81,7 +95,8 @@ const Footer = () => {
             <div className="col-md-6">
               <div className="text">
                 <p>
-                  © {new Date().getFullYear()} UnderRate. Todos los derechos reservados.
+                  © {new Date().getFullYear()} UnderRate. Todos los derechos
+                  reservados.
                 </p>
               </div>
             </div>
