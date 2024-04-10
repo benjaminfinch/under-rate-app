@@ -1,5 +1,20 @@
 import { Link, useNavigate } from "react-router-dom";
 import UnderRate from "../assets/images/UnderRate.svg";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+  const notify = () =>
+    toast.info("Hasta pronto 😎✌🏼", {
+      position: "bottom-right",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
 
 function MenuHeader() {
   const navigate = useNavigate();
@@ -8,6 +23,7 @@ function MenuHeader() {
   const logout = () => {
     localStorage.removeItem("email");
     navigate("/");
+    notify();
   };
 
   const showPublicMenu = () => {
