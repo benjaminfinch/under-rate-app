@@ -6,6 +6,7 @@ import ImageCD7 from '../assets/images/cd7.webp'
 import ImageCD8 from '../assets/images/cd8.webp'
 import ImageMusic18 from '../assets/images/music-18.svg'
 
+
 const artistas = () => {
   return (
     <section className="fancy-features">
@@ -16,7 +17,7 @@ const artistas = () => {
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="section-title text-center mb-45 wow fadeInUp">
               <div >
-                <img src="ImageMusic18" width={60} alt="Site Logo" />
+                <img src={ImageMusic18} width={60} alt="Site Logo" />
               </div>
                 <h2 className="anclaDos text-uppercase mt-20">
                   Somos una comunidad que promueve a los nuevos artistas
