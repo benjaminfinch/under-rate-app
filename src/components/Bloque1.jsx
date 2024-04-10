@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'react-bootstrap/Image';
+import ImagenBloqueUno from "../assets/images/imagenBloque1.png";
 
 const Bloque1 = () => {
   return (
@@ -12,7 +13,7 @@ const Bloque1 = () => {
                    Ofrecemos una amplia variedad de funciones para usuarios tanto aficionados como profesionales de la música.</p>
           </div>
           <div className='col-lg-6 col-md-12 col-sm-6 pt-30'>
-               <Image className='shadow ' src="src/assets/images/imagenBloque1.png" width={480}  rounded />
+               <Image className='shadow ' src={ImagenBloqueUno} width={480}  rounded />
           </div>
       
        </div>
