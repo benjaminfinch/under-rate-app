@@ -2,9 +2,6 @@ import React from 'react'
 import Image from 'react-bootstrap/Image';
 import ImagenBloqueUno from '../assets/images/imagenBloque1.png'
 
-
-const tab = '\u00A0';
-
 const Bloque_1_Nosotros = () => {
   return (
     <>
