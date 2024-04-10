@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-
+import UnderRateBlanco from "../assets/images/UnderRateBlanco.svg";
 const Footer = () => {
   return (
     <footer
       className="footer-area footer-style-two bg_cover"
-      style={{ backgroundImage: "url(src/assets/images/slide2.png)" }}
+       style={{ backgroundImage: "url(src/assets/images/slide2.png)" }}
     >
       <div className="container">
         <div className="footer-widget pt-70 pb-35">
@@ -14,9 +14,9 @@ const Footer = () => {
                 className="widget about-widget mb-40 wow fadeInUp"
                 data-wow-delay=".2s"
               >
-                <div className="logo mb-35">                  
+                <div className="logo mb-35">
                     <a>
-                     <img src="src/assets/images/UnderRateBlanco.svg" width={220} alt="Site Logo" />
+                     <img src={UnderRateBlanco} width={220} alt="Site Logo" />
                     </a>                  
                 </div>
                 <div className="about-content">
