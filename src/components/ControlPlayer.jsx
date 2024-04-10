@@ -24,16 +24,16 @@ const testPlaylist = {
       thumbnail: 'src={Cover2}'
     },
     {
-      src: "https://stayhome-api.herokuapp.com/stream?id=WWB01IuMvzA",
-      title: "Banda nro.3",
-      author: "tema nro3",
+      src: 'https://stayhome-api.herokuapp.com/stream?id=WWB01IuMvzA',
+      title: 'Banda nro.3',
+      author: 'tema nro3',
       thumbnail: 'src={Cover3}'
     },
     {
-      src : "src/assets/images/cover3.png",
-      title : "Banda nro.4",
-      author : "tema nro4",
-      thumbnail : 'src={Cover4}'
+      src: "https://stayhome-api.herokuapp.com/stream?id=WWB01IuMvzA",
+      title: 'Banda nro.4',
+      author: 'tema nro4',
+      thumbnail: 'src={Cover4}'
   }
   ],
 }
