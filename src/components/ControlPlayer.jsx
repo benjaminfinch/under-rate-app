@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useMusicStore } from "../store/musicStore";
 import { Player } from "@dalanke/react-audio-player";
 
-
 // const testPlaylist = {
 //   name: "Temp Playlist",
 //   description: "",
@@ -69,8 +68,7 @@ export default function Controles() {
         musics: [...prevState.musics, songData],
       }));
     });
-  }, []);
-  // useEffect(() => {}, [playlist]);
+  }, [music]);
 
   return (
     <div className="App">
