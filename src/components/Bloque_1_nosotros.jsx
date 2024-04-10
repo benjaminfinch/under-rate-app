@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'react-bootstrap/Image';
+import ImagenBloqueUno from '../assets/images/imagenBloque1.png'
 
 const Bloque_1_Nosotros = () => {
   return (
@@ -13,7 +14,7 @@ const Bloque_1_Nosotros = () => {
                <p>UnderRate se destaca por su enfoque en la equidad y la democratización del acceso a la industria musical, proporcionando una plataforma inclusiva donde todos los artistas tienen la oportunidad de ser descubiertos y valorados por su talento, independientemente de su popularidad o recursos previos.</p>
           </div>
           <div className='col-lg-6 col-md-12 col-sm-6 pt-30'>
-               <Image className='shadow ' src="src/assets/images/imagenBloque1.png" width={480}  rounded />
+               <Image className='shadow ' src={ImagenBloqueUno} width={480}  rounded />
           </div>
       
        </div>
