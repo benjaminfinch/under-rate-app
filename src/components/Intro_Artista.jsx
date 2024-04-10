@@ -17,7 +17,7 @@ const artistas = () => {
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="section-title text-center mb-45 wow fadeInUp">
               <div >
-                <img src={ImageMusic18} width={60} alt="Site Logo" />
+                <img src={ImageMusic18} width={60} alt="Music Logo" />
               </div>
                 <h2 className="anclaDos text-uppercase mt-20">
                   Somos una comunidad que promueve a los nuevos artistas
