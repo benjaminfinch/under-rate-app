@@ -23,8 +23,8 @@ export const TablaCanciones = () => {
       .then((response) => response.json())
       .then((data) => {
         // removeMusic()
+        console.log(data);
         setMusic(data);
-        print(music);
         setSongs(data);
       });
   }, []);

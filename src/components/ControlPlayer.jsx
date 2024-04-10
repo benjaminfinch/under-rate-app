@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { useEffect, useState } from "react";
+import { useMusicStore } from "../store/musicStore";
 import { Player } from "@dalanke/react-audio-player";
 
 const testPlaylist = {
@@ -34,29 +35,51 @@ const testPlaylist = {
   ],
 };
 function Controls() {
-  const [playlist, setPlaylist] = useState([]);
+  const music = useMusicStore((state) => state.music);
+  let [formatedMusic, setFormatedMusic] = useState({
+    name: "Playin music",
+    description: "",
+    musics: [],
+  });
+  const [playlist, setPlaylist] = useState(null);
   const [hidePlayer, setHidePlayer] = useState(false);
-  const shufflePlaylist = (callback) => {
-    const copyList = [...playlist.musics];
-    for (let i = copyList.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [copyList[i], copyList[j]] = [copyList[j], copyList[i]];
-    }
-
-    // we need reset the current index after shuffle, pass the call back in here
-    this.setState(
-      { playlist: { ...this.state.playlist, musics: copyList } },
-      callback
-    );
-  };
+  useEffect(() => {
+    console.log("hola");
+    music.forEach((song) => {
+      const songData = {
+        src: song.sound_archive,
+        title: song.song_name,
+      };
+      setFormatedMusic((prev) => {
+        return { ...prev, musics: [...prev.musics, songData] };
+      });
+      formatedMusic.musics.push(songData);
+    });
+    setPlaylist({ ...formatedMusic });
+    console.log(music);
+  }, []);
+  // const shufflePlaylist = (callback) => {
+  //   const copyList = [...music];
+  //   for (let i = copyList.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [copyList[i], copyList[j]] = [copyList[j], copyList[i]];
+  //   }
+  //   setPlaylist({...playlist})
+  //     // we need reset the current index after shuffle, pass the call back in here
+  //   setPlaylist({...playlist, musics: copyList})
+  //   this.setState(
+  //     { playlist: { ...this.state.playlist, musics: copyList } },
+  //     callback
+  //   );
+  // };
 
   return (
     <div className="App">
       <header className="App-header">
         <Player
-          playlist={this.state.playlist}
-          shufflePlaylist={this.shufflePlaylist}
-          removeFromPlaylist={this.removeFromPlaylist}
+          playlist={playlist}
+          // shufflePlaylist={this.shufflePlaylist}
+          // removeFromPlaylist={this.removeFromPlaylist}
           hide={this.state.hidePlayer}
         />
       </header>
