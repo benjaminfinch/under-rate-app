@@ -7,6 +7,7 @@ export const TablaCanciones = () => {
   const params = useParams();
   const music = useMusicStore((state) => state.music);
   const setMusic = useMusicStore((state) => state.setMusic);
+  const removeMusic = useMusicStore((state) => state.removeMusic);
   // const removeMusic = useMusicStore((state) => state.removeAllMusic)
   // const useMusicStore((state) => state.music)
   useEffect(() => {
@@ -21,12 +22,13 @@ export const TablaCanciones = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        // removeMusic()
+        removeMusic();
         setMusic(data);
         setSongs(data);
       });
   }, []);
   // useEffect(() => {
+  //   console.log(music);
   // }, [songs]);
 
   return (
