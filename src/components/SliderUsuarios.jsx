@@ -1,6 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
 import Image from "react-bootstrap/Image";
+import avatar1 from "../assets/images/avatar1.png";
+
 
 const testimonialSliderOne = {
   dots: false,
@@ -48,7 +50,7 @@ const SliderUsuarios = () => {
                       <Image
                         width={50}
                         height={50}
-                        src="\src\assets\images\avatar1.png"
+                        src={avatar1}
                         alt="user image"
                       />
                     </div>
