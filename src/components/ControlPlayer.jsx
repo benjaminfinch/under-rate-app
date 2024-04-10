@@ -8,26 +8,26 @@ const testPlaylist = {
   musics: [
     {
       src: 'https://stayhome-api.herokuapp.com/stream?id=HdQCWXh3XXU',
-      title: 'Banda nro.1',
-      author: 'tema nro1',
+      title: 'Banda 1',
+      author: 'Demo 1',
       thumbnail: 'src/assets/images/cover1.png'
     },
     {
       src: 'https://stayhome-api.herokuapp.com/stream?id=E8S2IHiuWZA',
-      title: 'Banda nro.2',
-      author: 'tema nro2',
+      title: 'Banda 2',
+      author: 'Demo 2',
       thumbnail: 'src/assets/images/cover2.png'
     },
     {
       src: 'https://stayhome-api.herokuapp.com/stream?id=WWB01IuMvzA',
-      title: 'Banda nro.3',
-      author: 'tema nro3',
+      title: 'Banda 3',
+      author: 'Demo 3',
       thumbnail: 'src/assets/images/cover3.png'
     },
     {
-      src: 'src/assets/images/cover3.png',
-      title: 'Banda nro.4',
-      author: 'tema nro4',
+      src: 'src/assets/images/cover4.png',
+      title: 'Banda 4',
+      author: 'Demo 4',
       thumbnail: 'src/assets/images/cover4.png'
     }
   ]

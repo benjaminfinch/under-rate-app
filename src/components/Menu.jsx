@@ -78,18 +78,18 @@ function MenuHeader() {
                 <Link
                   className="nav-link active"
                   aria-current="page"
-                  to="/resumen-bandas"
+                  to="/nosotros"
                 >
-                  Bandas Destacadas
+                  Nosotros
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   className="nav-link active"
                   aria-current="page"
-                  to="/nosotros"
+                  to="/resumen-bandas"
                 >
-                  Nosotros
+                  Bandas Destacadas
                 </Link>
               </li>
             </ul>
