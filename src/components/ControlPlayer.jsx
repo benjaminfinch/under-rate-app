@@ -10,27 +10,27 @@ const testPlaylist = {
       src: 'https://stayhome-api.herokuapp.com/stream?id=HdQCWXh3XXU',
       title: 'Banda nro.1',
       author: 'tema nro1',
-      thumbnail: 'src/assets/images/cover1.png',
+      thumbnail: 'src/assets/images/cover1.png'
     },
     {
       src: 'https://stayhome-api.herokuapp.com/stream?id=E8S2IHiuWZA',
       title: 'Banda nro.2',
       author: 'tema nro2',
-      thumbnail: "src/assets/images/cover2.png".
+      thumbnail: 'src/assets/images/cover2.png'
     },
     {
-      src: "https://stayhome-api.herokuapp.com/stream?id=WWB01IuMvzA",
-      title: "Banda nro.3",
-      author: "tema nro3",
-      thumbnail: "src/assets/images/cover3.png"
+      src: 'https://stayhome-api.herokuapp.com/stream?id=WWB01IuMvzA',
+      title: 'Banda nro.3',
+      author: 'tema nro3',
+      thumbnail: 'src/assets/images/cover3.png'
     },
     {
-      src : "src/assets/images/cover3.png",
-      title : "Banda nro.4",
-      author : "tema nro4",
-      thumbnail : "src/assets/images/cover4.png"
-  }
-  ],
+      src: 'src/assets/images/cover3.png',
+      title: 'Banda nro.4',
+      author: 'tema nro4',
+      thumbnail: 'src/assets/images/cover4.png'
+    }
+  ]
 }
 
 class Controles extends React.Component {
