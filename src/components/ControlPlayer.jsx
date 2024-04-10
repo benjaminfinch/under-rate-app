@@ -1,6 +1,11 @@
 import React from 'react';
 import '../App.css';
 import { Player } from '@dalanke/react-audio-player';
+import Cover1 from '../assets/images/cover1.png'
+import Cover2 from '../assets/images/cover2.png'
+import Cover3 from '../assets/images/cover3.png'
+import Cover4 from '../assets/images/cover4.png'
+import ImagenCD1 from "../assets/images/cd1.webp";
 
 const testPlaylist = {
   name: 'Temp Playlist',
@@ -10,25 +15,25 @@ const testPlaylist = {
       src: 'https://stayhome-api.herokuapp.com/stream?id=HdQCWXh3XXU',
       title: 'Banda nro.1',
       author: 'tema nro1',
-      thumbnail: 'src/assets/images/cover1.png',
+      thumbnail: 'src={Cover1}'
     },
     {
       src: 'https://stayhome-api.herokuapp.com/stream?id=E8S2IHiuWZA',
       title: 'Banda nro.2',
       author: 'tema nro2',
-      thumbnail: 'src/assets/images/cover2.png',
+      thumbnail: 'src={Cover2}'
     },
     {
       src: "https://stayhome-api.herokuapp.com/stream?id=WWB01IuMvzA",
       title: "Banda nro.3",
       author: "tema nro3",
-      thumbnail: "src/assets/images/cover3.png"
+      thumbnail: 'src={Cover3}'
     },
     {
       src : "src/assets/images/cover3.png",
       title : "Banda nro.4",
       author : "tema nro4",
-      thumbnail : "src/assets/images/cover4.png"
+      thumbnail : 'src={Cover4}'
   }
   ],
 }
