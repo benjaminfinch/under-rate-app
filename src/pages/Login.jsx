@@ -22,37 +22,21 @@ export default function Login() {
       theme: "dark",
       transition: Bounce,
     });
-
+  const notify2 = () =>
+    toast.error("Credenciales invalidas", {
+      position: "bottom-right",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
   const navigateToRegister = (e) => {
     navigate("/registro");
   };
-  /*
-  const loginUser = async () => {
-    const res = await fetch(
-      "https://web-production-3722.up.railway.app/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-      }
-    );
-    const data = await res.data;
-    if (data.message == "Credenciales invalidas") {
-      //Usuario
-      localStorage.clear();
-      //Toast usuario no existe
-      return;
-    }
-    localStorage.setItem("email", email);
-    localStorage.setItem("user_id", data.user_id);
-    //Toast usuario si existe
-    return navigate("/resumen-bandas");
-  };*/
 
   const loginUser = () => {
     fetch("https://web-production-3722.up.railway.app/login", {
@@ -68,7 +52,7 @@ export default function Login() {
       .then((response) => {
         if(response.status !== 200){
           alert("Credenciales invalidas");
-          //TODO: Aquío va el toast
+          notify2();
         } else {
           return response.json()
         }
