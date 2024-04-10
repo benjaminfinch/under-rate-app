@@ -12,7 +12,7 @@ const reproductor = () => {
        <Bloque1_Reproductor />
        <TablaCanciones/>
        <SliderUsuarios />
-       <Controles />
+       {/* <Controles /> */}
     </>
   )
 }
