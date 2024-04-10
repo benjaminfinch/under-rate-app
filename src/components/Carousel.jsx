@@ -37,7 +37,7 @@ export default function SimpleSlider() {
                         Únete la comunidad más grande de música emergente
                     </span>
                     <h1 data-animation="fadeInDown" data-delay=".5s">
-                      ¡Sube tus demos!
+                      ¡Sube tus canciones!
                     </h1>
                     <ul
                       className="button"

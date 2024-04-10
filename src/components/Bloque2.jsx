@@ -11,9 +11,8 @@ const Bloque2 = () => {
                <Image className='shadow' src={ImagenBloqueDos} width={480}  rounded />
           </div>
           <div className='col-lg-6 col-md-12 col-sm-6 pt-30'>
-               <h1>Acerca de Under Rate</h1>
-               <p>Under Rate es una plataforma de música en línea que permite a los usuarios descubrir, escuchar, subir y compartir música.
-                   Ofrecemos una amplia variedad de funciones para usuarios tanto aficionados como profesionales de la música.</p>
+               <h1>Visión de proyecto</h1>
+               <p>Nuestra visión es democratizar el acceso a la industria musical, brindando a los artistas emergentes una plataforma sin trabas ni barreras burocráticas para compartir su música.</p>
           </div>
        </div>
     </div>

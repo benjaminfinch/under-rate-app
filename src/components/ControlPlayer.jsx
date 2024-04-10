@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useMusicStore } from "../store/musicStore";
 import { Player } from "@dalanke/react-audio-player";
 
+
 // const testPlaylist = {
 //   name: "Temp Playlist",
 //   description: "",
@@ -49,6 +50,7 @@ export default function Controles() {
   const [hidePlayer, setHidePlayer] = useState(false);
   const shufflePlaylist = (callback) => {
     const copyList = [...playlist.musics];
+
     for (let i = copyList.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [copyList[i], copyList[j]] = [copyList[j], copyList[i]];
