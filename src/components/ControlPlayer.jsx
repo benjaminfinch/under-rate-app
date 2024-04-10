@@ -34,7 +34,7 @@ const testPlaylist = {
     },
   ],
 };
-function Controls() {
+export default function Controles() {
   const music = useMusicStore((state) => state.music);
   let [formatedMusic, setFormatedMusic] = useState({
     name: "Playin music",
@@ -43,8 +43,17 @@ function Controls() {
   });
   const [playlist, setPlaylist] = useState(null);
   const [hidePlayer, setHidePlayer] = useState(false);
+  const shufflePlaylist = (callback) => {
+    const copyList = [...playlist.musics];
+    for (let i = copyList.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copyList[i], copyList[j]] = [copyList[j], copyList[i]];
+    }
+    callback();
+    setPlaylist({ ...playlist, musics: copyList });
+  };
   useEffect(() => {
-    console.log("hola");
+    console.log("montando");
     music.forEach((song) => {
       const songData = {
         src: song.sound_archive,
@@ -58,30 +67,19 @@ function Controls() {
     setPlaylist({ ...formatedMusic });
     console.log(music);
   }, []);
-  // const shufflePlaylist = (callback) => {
-  //   const copyList = [...music];
-  //   for (let i = copyList.length - 1; i > 0; i--) {
-  //     const j = Math.floor(Math.random() * (i + 1));
-  //     [copyList[i], copyList[j]] = [copyList[j], copyList[i]];
-  //   }
-  //   setPlaylist({...playlist})
-  //     // we need reset the current index after shuffle, pass the call back in here
-  //   setPlaylist({...playlist, musics: copyList})
-  //   this.setState(
-  //     { playlist: { ...this.state.playlist, musics: copyList } },
-  //     callback
-  //   );
-  // };
+  useEffect(() => {
+    console.log("Playlist actualizada : " + music);
+  }, [playlist]);
 
   return (
     <div className="App">
       <header className="App-header">
-        <Player
+        {/* <Player
           playlist={playlist}
-          // shufflePlaylist={this.shufflePlaylist}
+          shufflePlaylist={shufflePlaylist}
           // removeFromPlaylist={this.removeFromPlaylist}
-          hide={this.state.hidePlayer}
-        />
+          hide={hidePlayer}
+        /> */}
       </header>
     </div>
   );
@@ -91,50 +89,50 @@ function Controls() {
 /**---------------------------------------------------------------------------------------------------------- */
 /**---------------------------------------------------------------------------------------------------------- */
 /**---------------------------------------------------------------------------------------------------------- */
-class Controles extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      playlist: testPlaylist,
-      hidePlayer: false,
-    };
-  }
+// class Controles extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       playlist: testPlaylist,
+//       hidePlayer: false,
+//     };
+//   }
 
-  shufflePlaylist = (callback) => {
-    const copyList = [...this.state.playlist.musics];
-    for (let i = copyList.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [copyList[i], copyList[j]] = [copyList[j], copyList[i]];
-    }
+//   shufflePlaylist = (callback) => {
+//     const copyList = [...this.state.playlist.musics];
+//     for (let i = copyList.length - 1; i > 0; i--) {
+//       const j = Math.floor(Math.random() * (i + 1));
+//       [copyList[i], copyList[j]] = [copyList[j], copyList[i]];
+//     }
 
-    // we need reset the current index after shuffle, pass the call back in here
-    this.setState(
-      { playlist: { ...this.state.playlist, musics: copyList } },
-      callback
-    );
-  };
+//     // we need reset the current index after shuffle, pass the call back in here
+//     this.setState(
+//       { playlist: { ...this.state.playlist, musics: copyList } },
+//       callback
+//     );
+//   };
 
-  // remove a song from current playlist
-  removeFromPlaylist = (index) => {
-    const copyList = [...this.state.playlist.musics];
-    copyList.splice(index, 1);
-    this.setState({ playlist: { ...this.state.playlist, musics: copyList } });
-  };
+//   // remove a song from current playlist
+//   removeFromPlaylist = (index) => {
+//     const copyList = [...this.state.playlist.musics];
+//     copyList.splice(index, 1);
+//     this.setState({ playlist: { ...this.state.playlist, musics: copyList } });
+//   };
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <Player
-            playlist={this.state.playlist}
-            shufflePlaylist={this.shufflePlaylist}
-            removeFromPlaylist={this.removeFromPlaylist}
-            hide={this.state.hidePlayer}
-          />
-        </header>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div className="App">
+//         <header className="App-header">
+//           <Player
+//             playlist={this.state.playlist}
+//             shufflePlaylist={this.shufflePlaylist}
+//             removeFromPlaylist={this.removeFromPlaylist}
+//             hide={this.state.hidePlayer}
+//           />
+//         </header>
+//       </div>
+//     );
+//   }
+// }
 
-export default Controles;
+// export default Controles;
