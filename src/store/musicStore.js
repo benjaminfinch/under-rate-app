@@ -5,5 +5,6 @@ export const useMusicStore = create((set) => {
     music: [],
     // removeAllMusic: () => set((state) => ({ musics: [] })),
     setMusic: (newMusic) => set((state) => ({ music: [...newMusic] })),
+    removeMusic: () => set((state) => ({ music: [] })),
   };
 });
