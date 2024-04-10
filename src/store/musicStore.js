@@ -1,5 +1,9 @@
-import {create} from 'zustand';
+import { create } from "zustand";
 
-create((set) => ({
-
-})
+export const useMusicStore = create((set) => {
+  return {
+    music: [],
+    removeAllMusic: () => set((state) => ({ musics: [] })),
+    setMusic: (newMusic) => set([...newMusic]),
+  };
+});
