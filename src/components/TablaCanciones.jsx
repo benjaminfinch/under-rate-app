@@ -9,7 +9,6 @@ export const TablaCanciones = () => {
   const setMusic = useMusicStore((state) => state.setMusic);
   // const removeMusic = useMusicStore((state) => state.removeAllMusic)
   // const useMusicStore((state) => state.music)
-
   useEffect(() => {
     fetch(
       `https://web-production-3722.up.railway.app/songs/${params.user_id}`,
@@ -23,11 +22,12 @@ export const TablaCanciones = () => {
       .then((response) => response.json())
       .then((data) => {
         // removeMusic()
-        console.log(data);
         setMusic(data);
         setSongs(data);
       });
   }, []);
+  // useEffect(() => {
+  // }, [songs]);
 
   return (
     <>

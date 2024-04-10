@@ -4,36 +4,36 @@ import { useEffect, useState } from "react";
 import { useMusicStore } from "../store/musicStore";
 import { Player } from "@dalanke/react-audio-player";
 
-const testPlaylist = {
-  name: "Temp Playlist",
-  description: "",
-  musics: [
-    {
-      src: "https://stayhome-api.herokuapp.com/stream?id=HdQCWXh3XXU",
-      title: "Banda nro.1",
-      author: "tema nro1",
-      thumbnail: "src/assets/images/cover1.png",
-    },
-    {
-      src: "https://stayhome-api.herokuapp.com/stream?id=E8S2IHiuWZA",
-      title: "Banda nro.2",
-      author: "tema nro2",
-      thumbnail: "src/assets/images/cover2.png",
-    },
-    {
-      src: "https://stayhome-api.herokuapp.com/stream?id=WWB01IuMvzA",
-      title: "Banda nro.3",
-      author: "tema nro3",
-      thumbnail: "src/assets/images/cover3.png",
-    },
-    {
-      src: "src/assets/images/cover3.png",
-      title: "Banda nro.4",
-      author: "tema nro4",
-      thumbnail: "src/assets/images/cover4.png",
-    },
-  ],
-};
+// const testPlaylist = {
+//   name: "Temp Playlist",
+//   description: "",
+//   musics: [
+//     {
+//       src: "https://stayhome-api.herokuapp.com/stream?id=HdQCWXh3XXU",
+//       title: "Banda nro.1",
+//       author: "tema nro1",
+//       thumbnail: "src/assets/images/cover1.png",
+//     },
+//     {
+//       src: "https://stayhome-api.herokuapp.com/stream?id=E8S2IHiuWZA",
+//       title: "Banda nro.2",
+//       author: "tema nro2",
+//       thumbnail: "src/assets/images/cover2.png",
+//     },
+//     {
+//       src: "https://stayhome-api.herokuapp.com/stream?id=WWB01IuMvzA",
+//       title: "Banda nro.3",
+//       author: "tema nro3",
+//       thumbnail: "src/assets/images/cover3.png",
+//     },
+//     {
+//       src: "src/assets/images/cover3.png",
+//       title: "Banda nro.4",
+//       author: "tema nro4",
+//       thumbnail: "src/assets/images/cover4.png",
+//     },
+//   ],
+// };
 export default function Controles() {
   const music = useMusicStore((state) => state.music);
   let [formatedMusic, setFormatedMusic] = useState({
@@ -41,7 +41,11 @@ export default function Controles() {
     description: "",
     musics: [],
   });
-  const [playlist, setPlaylist] = useState(null);
+  const [playlist, setPlaylist] = useState({
+    name: "Playin music",
+    description: "",
+    musics: [],
+  });
   const [hidePlayer, setHidePlayer] = useState(false);
   const shufflePlaylist = (callback) => {
     const copyList = [...playlist.musics];
@@ -53,33 +57,28 @@ export default function Controles() {
     setPlaylist({ ...playlist, musics: copyList });
   };
   useEffect(() => {
-    console.log("montando");
     music.forEach((song) => {
       const songData = {
         src: song.sound_archive,
         title: song.song_name,
       };
-      setFormatedMusic((prev) => {
-        return { ...prev, musics: [...prev.musics, songData] };
-      });
-      formatedMusic.musics.push(songData);
+      setPlaylist((prevState) => ({
+        ...prevState,
+        musics: [...prevState.musics, songData],
+      }));
     });
-    setPlaylist({ ...formatedMusic });
-    console.log(music);
   }, []);
-  useEffect(() => {
-    console.log("Playlist actualizada : " + music);
-  }, [playlist]);
+  // useEffect(() => {}, [playlist]);
 
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Player
+        <Player
           playlist={playlist}
           shufflePlaylist={shufflePlaylist}
           // removeFromPlaylist={this.removeFromPlaylist}
           hide={hidePlayer}
-        /> */}
+        />
       </header>
     </div>
   );
@@ -105,14 +104,14 @@ export default function Controles() {
 //       [copyList[i], copyList[j]] = [copyList[j], copyList[i]];
 //     }
 
-//     // we need reset the current index after shuffle, pass the call back in here
+//     we need reset the current index after shuffle, pass the call back in here
 //     this.setState(
 //       { playlist: { ...this.state.playlist, musics: copyList } },
 //       callback
 //     );
 //   };
 
-//   // remove a song from current playlist
+//   remove a song from current playlist
 //   removeFromPlaylist = (index) => {
 //     const copyList = [...this.state.playlist.musics];
 //     copyList.splice(index, 1);
