@@ -43,8 +43,7 @@ const SliderUsuarios = () => {
               <div className="testimonial-item wow fadeInUp pr-20">
                 <div className="wt-content">
                   <p>
-                    Un sitio increíble para descubrir música underground. Ya
-                    tengo mis nuevos artistas favoritos.
+                    Un buen sitio para descubrir música. Ya tengo mis nuevos artistas favoritos.
                   </p>
                   <div className="author-title-thumb">
                     <div className="author-thumb">
@@ -56,7 +55,7 @@ const SliderUsuarios = () => {
                       />
                     </div>
                     <div className="author-title pt-10">
-                      <h3>Peter</h3>
+                      <h3>Diego</h3>
                       <p className="position">@Usuario1</p>
                     </div>
                   </div>
@@ -65,9 +64,7 @@ const SliderUsuarios = () => {
               <div className="testimonial-item wow fadeInUp pr-20">
                 <div className="wt-content">
                   <p>
-                    Es genial poder interactuar de una forma más cercana con los
-                    artistas. Llevo poco tiempo utilizando el sitio pero hasta
-                    ahora he tenido una buena experiencia.
+                    Es genial poder interactuar de una forma más cercana con los artistas.
                   </p>
                   <div className="author-title-thumb">
                     <div className="author-thumb">
@@ -79,7 +76,7 @@ const SliderUsuarios = () => {
                       />
                     </div>
                     <div className="author-title pt-10">
-                      <h3>Johana</h3>
+                      <h3>Benjamín</h3>
                       <p className="position">@Usuario2</p>
                     </div>
                   </div>
@@ -88,7 +85,7 @@ const SliderUsuarios = () => {
               <div className="testimonial-item wow fadeInUp pr-20">
                 <div className="wt-content">
                   <p>
-                    Buen servicio al cliente.
+                    Buena iniciativa. Recomiendo.
                   </p>
                   <div className="author-title-thumb pt-10">
                     <div className="author-thumb">
