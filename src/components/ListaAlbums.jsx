@@ -32,7 +32,7 @@ const artistas = () => {
                 <img src="src/assets/images/iso.svg" width={60} alt="Site Logo" />
               </div> */}
                   <h2 className="text-uppercase anclaDos">
-                    Top Álbumes del mes
+                    Top Álbumes
                   </h2>
                 </div>
               </div>
