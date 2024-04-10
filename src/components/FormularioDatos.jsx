@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form, redirect } from "react-router-dom";
+import UnderRateBlanco from '../assets/images/UnderRateBlanco.svg'
 
 const FormularioDatos = () => {
     return (
@@ -10,7 +11,7 @@ const FormularioDatos = () => {
           <div className='border radio pt-60 pb-40 pl-30 pr-30'>
           <a className="brand-logo mb-30" href="#">
                 <img
-                  src="src/assets/images/UnderRateBlanco.svg"
+                  src={UnderRateBlanco}
                   width={180}
                   alt="Site Logo"
                 />

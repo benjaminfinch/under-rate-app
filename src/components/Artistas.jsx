@@ -3,7 +3,7 @@ import Image from 'react-bootstrap/Image';
 import ImagenCD1 from '../assets/images/cd1.webp'
 import ImagenCD2 from '../assets/images/cd2.webp'
 import ImagenCD3 from '../assets/images/cd3.webp'
-import ImagenCD5 from '../assets/images/cd3.webp'
+import ImagenCD5 from '../assets/images/cd5.webp'
 import IsoSvg from '../assets/images/iso.svg'
 
 const artistas = () => {
